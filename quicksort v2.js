@@ -1,12 +1,15 @@
 function quicksort(array) {
-  const left = 0;
-  const right = array.length - 1;
+  quicksortHelper(array, 0, array.length - 1);
 
+  return array;
+}
+
+function quicksortHelper(array, left, right) {
   if (left < right) {
     const pivotPosition = partition(array, left, right);
 
-    quicksort(array, left, pivotPosition - 1);
-    quicksort(array, pivotPosition + 1, right);
+    quicksortHelper(array, left, pivotPosition - 1);
+    quicksortHelper(array, pivotPosition + 1, right);
   }
 }
 
@@ -29,9 +32,7 @@ function partition(array, left, right) {
 }
 
 function swap(array, i, j) {
-  const temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
+  [[array[i], array[j]]] = [[array[j], array[i]]];
 }
 
 let arr = [34, 123, 12, 44, 64, 35, 21, 87];
