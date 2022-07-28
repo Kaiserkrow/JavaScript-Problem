@@ -3,7 +3,7 @@ const HIGH_TEMPERATURES = {
     today: 77,
     tomorrow: 80
 };
-
+ // note: use curly bracket {} if you're going to destructure an object and use brackets [] if destructuring an array 
 const{today, tomorrow} = HIGH_TEMPERATURES; //getting the value of an object using destructuring method
 const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES; //giving the extracted value a variable name
 
