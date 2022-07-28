@@ -1,3 +1,4 @@
+//function for printing
 function getsNthLargest(array, nthLargest) {
   console.log("Given array: " + "[" + array + "]");
   quicksort(array);
@@ -13,8 +14,8 @@ function quicksort(array) {
 function quicksortHelper(array, left, right) {
   if (left < right) {
     const pivotFinalPos = partition(array, left, right);
-    quicksortHelper(array, left, pivotFinalPos - 1);
-    quicksortHelper(array, pivotFinalPos + 1, right);
+    quicksortHelper(array, left, pivotFinalPos - 1); // quicksort on left side of pivot
+    quicksortHelper(array, pivotFinalPos + 1, right); // quicksort on right side of pivot
   }
 }
 
@@ -33,7 +34,7 @@ function partition(array, left, right) {
 }
 
 function swap(array, i, j) {
-  [array[i], array[j]] = [array[j], array[i]];
+  [array[i], array[j]] = [array[j], array[i]]; //swapping two elements without using a third variable
 }
 
 let arr = [34, 123, 12, 44, 64, 35, 21, 87];
