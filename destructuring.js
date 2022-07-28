@@ -21,3 +21,19 @@ const {name, favoriteFood, address: {street}} = personTwo;
 
 console.log(street);
 console.log(`${highToday} and ${highTomorrow}`);  //string literal
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = ({max, min}) =>  (max + min)/ 2.0;    //wrap your head around this, don't know na pwede pala idestructure ang object na walang pinagkukunan na object, kasi isa siyang function????? 
+// Only change code above this line
+
+console.log(half(stats));
