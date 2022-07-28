@@ -9,4 +9,6 @@ const numbers = ['1','2','3','4','5','6'];
 
 const [a,,b, ...d] = alphabet; //spread operator and using destructuring method
 
+const newArray = [...alphabet, ...numbers];
 console.log(a + b + " " + d); 
+console.log(newArray);
